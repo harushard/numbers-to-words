@@ -1,0 +1,1 @@
+Start-Process powershell -ArgumentList "-noexit", "-command dotnet test NumbersConverter.UnitTests\NumbersConverter.UnitTests.csproj"

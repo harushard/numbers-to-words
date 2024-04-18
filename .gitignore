@@ -1,0 +1,10 @@
+/.vs
+/NumbersConverter.UnitTests/bin
+/NumbersConverter.UnitTests/obj
+/NumbersConverter/bin
+/NumbersConverter/obj
+/NumbersToWords.WebApi/bin
+/NumbersToWords.WebApi/obj
+/*.user
+/output
+/NumbersToWords.WebUi/output
