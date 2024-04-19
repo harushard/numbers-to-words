@@ -72,7 +72,7 @@ namespace NumbersConverter.UnitTests
             {
                 samples[i]
                     = $"{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.Next(int.MaxValue)}"
-                        .PadRight(6, '0') + $".{Random.Shared.Next(0,99)}";
+                        .PadRight(126, '0') + $".{Random.Shared.Next(0,99)}";
             }
 
             foreach (var number in samples)
@@ -92,7 +92,8 @@ namespace NumbersConverter.UnitTests
             var samples = new string[6];
             for (var i = 0; i < 6; i++)
             {
-                samples[i] = $"{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.NextInt64(long.MaxValue)}".PadRight(Random.Shared.Next(66, 100), '0');
+                samples[i] = $"{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.NextInt64(long.MaxValue)}{Random.Shared.NextInt64(long.MaxValue)}"
+                    .PadRight(Random.Shared.Next(127, 150), '0') + $".{Random.Shared.Next(0,99)}";
             }
 
             foreach (var number in samples)

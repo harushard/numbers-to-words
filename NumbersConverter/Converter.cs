@@ -43,7 +43,27 @@ internal class Converter
             "SEPTENDECILLION",
             "OCTODECILLION",
             "NOVEMDECILLION",
-            "VIGINTILLION"
+            "VIGINTILLION",
+            "UNVIGINTILLION",
+            "DUOVIGINTILLION",
+            "TRESVIGINTILLION",
+            "QUATTUOR­VIGINT­ILLION",
+            "QUINVIGINTILLION",
+            "SESVIGINTILLION",
+            "SEPTEMVIGINTILLION",
+            "OCTOVIGINTILLION",
+            "NOVEMVIGINTILLION",
+            "TRIGINTILLION",
+            "UNTRIGINTILLION",
+            "DUOTRIGINTILLION",
+            "TRESTRIGINTILLION",
+            "QUATTUOR­TRIGINT­ILLION",
+            "QUINTRIGINTILLION",
+            "SESTRIGINTILLION",
+            "SEPTENTRIGINTILLION",
+            "OCTOTRIGINTILLION",
+            "NOVENTRIGINTILLION",
+            "QUADRAGINTILLION"
         }.ToImmutableArray();
     }
 
@@ -84,7 +104,7 @@ internal class Converter
             var groupsLength = groups.Count;
 
             if (groupsLength - 1 > _groupNames.Length)
-                throw new NotSupportedException($"Number is too big, only supported up to {_groupNames.Length * 3 + 2} digits number.");
+                throw new NotSupportedException($"Number is too big, only supported up to {(_groupNames.Length + 1) * 3} digits number.");
 
             var groupNames = GetGroupNames(groupsLength);
 

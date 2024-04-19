@@ -54,7 +54,7 @@ export default function Home() {
                 Only allow number characters (1 to 9), except for one dot before
                 Fractional part.
               </li>
-              <li>Integer part: Up to 65 digits</li>
+              <li>Integer part: Up to 126 digits</li>
               <li>Fractional part: Up to 2 digits</li>
               <li>Sample input: 1234567.89</li>
             </ul>
@@ -82,11 +82,26 @@ export default function Home() {
             Convert
           </button>
         </div>
+        {inputVal.length > 0 ? (
+          <div className="text-center max-w-96">
+            <div className="text-xs font-semibold p-3 rounded-lg shadow bg-blue-200">
+              <p className="text-sm font-semibold border-b-2 border-solid border-slate-200 mb-4 pb-2">
+                Input
+              </p>
+              <p className="break-all">{inputVal}</p>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
         {outputVal.length > 0 ? (
-          <div className="text-center max-w-80">
-            <p className="text-xs font-semibold p-3 rounded-lg shadow bg-blue-300">
-              {outputVal}
-            </p>
+          <div className="text-center max-w-96">
+            <div className="text-xs font-semibold p-3 rounded-lg shadow bg-blue-300">
+              <p className="text-sm font-semibold border-b-2 border-solid border-slate-200 mb-4 pb-2">
+                Output
+              </p>
+              <p>{outputVal}</p>
+            </div>
           </div>
         ) : (
           <></>
